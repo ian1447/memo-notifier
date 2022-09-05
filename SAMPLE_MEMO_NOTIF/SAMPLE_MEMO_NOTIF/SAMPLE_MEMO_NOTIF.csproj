@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>9b6b87ba-e95c-4c84-a4fa-017e4dd283b4</ProjectGuid>
+    <ProjectGuid>{A1DB0D11-843C-4F39-AFE6-BFEFA616610E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SAMPLE_MEMO_NOTIF</RootNamespace>
