@@ -1,0 +1,8 @@
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\bin\Debug\Sample_Project.exe
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\bin\Debug\Sample_Project.pdb
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.Form1.resources
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.Properties.Resources.resources
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample Project.csproj.GenerateResource.Cache
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.exe
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.pdb
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.LogIn.resources

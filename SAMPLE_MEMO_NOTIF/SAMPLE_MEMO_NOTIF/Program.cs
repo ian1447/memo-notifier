@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 
-namespace Sample_Project
+namespace SAMPLE_MEMO_NOTIF
 {
     static class Program
     {
@@ -22,7 +22,7 @@ namespace Sample_Project
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new LogIn());
+            Application.Run(new Form1());
         }
     }
 }
