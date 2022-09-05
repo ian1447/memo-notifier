@@ -8,5 +8,10 @@ namespace SAMPLE_MEMO_NOTIF
 {
     class MySqlConnectivity
     {
+        public MySqlDataReader hello() {
+
+            MySqlDataReader tl = new MySqlDataReader();
+            return tl;
+        }
     }
 }
