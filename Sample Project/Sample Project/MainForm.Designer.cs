@@ -46,12 +46,14 @@
             this.txtTitle = new DevExpress.XtraEditors.TextEdit();
             this.memoDescription = new DevExpress.XtraEditors.MemoEdit();
             this.lblDescription = new DevExpress.XtraEditors.LabelControl();
+            this.picMemo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.Viewmemo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMemoNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMemo)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -124,6 +126,7 @@
             // 
             // Viewmemo
             // 
+            this.Viewmemo.Controls.Add(this.picMemo);
             this.Viewmemo.Controls.Add(this.lblDescription);
             this.Viewmemo.Controls.Add(this.memoDescription);
             this.Viewmemo.Controls.Add(this.txtTitle);
@@ -144,7 +147,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 20);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(197, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(141, 297);
             this.dataGridView1.TabIndex = 0;
             // 
             // simpleButton1
@@ -159,7 +162,7 @@
             // 
             // txtMemoNumber
             // 
-            this.txtMemoNumber.Location = new System.Drawing.Point(341, 20);
+            this.txtMemoNumber.Location = new System.Drawing.Point(252, 20);
             this.txtMemoNumber.MenuManager = this.ribbon;
             this.txtMemoNumber.Name = "txtMemoNumber";
             this.txtMemoNumber.Size = new System.Drawing.Size(155, 20);
@@ -167,7 +170,7 @@
             // 
             // lblMemoNum
             // 
-            this.lblMemoNum.Location = new System.Drawing.Point(287, 23);
+            this.lblMemoNum.Location = new System.Drawing.Point(198, 23);
             this.lblMemoNum.Name = "lblMemoNum";
             this.lblMemoNum.Size = new System.Drawing.Size(48, 13);
             this.lblMemoNum.TabIndex = 2;
@@ -175,7 +178,7 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Location = new System.Drawing.Point(304, 55);
+            this.lblTitle.Location = new System.Drawing.Point(215, 55);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(31, 13);
             this.lblTitle.TabIndex = 3;
@@ -183,7 +186,7 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(341, 52);
+            this.txtTitle.Location = new System.Drawing.Point(252, 52);
             this.txtTitle.MenuManager = this.ribbon;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(155, 20);
@@ -191,7 +194,7 @@
             // 
             // memoDescription
             // 
-            this.memoDescription.Location = new System.Drawing.Point(263, 108);
+            this.memoDescription.Location = new System.Drawing.Point(174, 108);
             this.memoDescription.MenuManager = this.ribbon;
             this.memoDescription.Name = "memoDescription";
             this.memoDescription.Size = new System.Drawing.Size(332, 209);
@@ -199,11 +202,19 @@
             // 
             // lblDescription
             // 
-            this.lblDescription.Location = new System.Drawing.Point(263, 89);
+            this.lblDescription.Location = new System.Drawing.Point(174, 89);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(57, 13);
             this.lblDescription.TabIndex = 6;
             this.lblDescription.Text = "Description:";
+            // 
+            // picMemo
+            // 
+            this.picMemo.Location = new System.Drawing.Point(535, 34);
+            this.picMemo.Name = "picMemo";
+            this.picMemo.Size = new System.Drawing.Size(292, 283);
+            this.picMemo.TabIndex = 7;
+            this.picMemo.TabStop = false;
             // 
             // MainForm
             // 
@@ -225,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMemoNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMemo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +261,6 @@
         private DevExpress.XtraEditors.TextEdit txtMemoNumber;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.PictureBox picMemo;
     }
 }
