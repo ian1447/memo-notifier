@@ -15,14 +15,15 @@ namespace SAMPLE_MEMO_NOTIF
             return conn;
         }
 
-        public bool isConnection() { 
+        public bool isConnection { 
             get {
                 try{
                     if (conn.State == System.Data.ConnectionState.Closed)
                     {
                         conn.Open();
-                        return true;
                     }
+                    
+                    return true;
                 } catch {
                     return false;
                 }
