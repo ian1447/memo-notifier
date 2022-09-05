@@ -16,5 +16,10 @@ namespace SAMPLE_MEMO_NOTIF
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

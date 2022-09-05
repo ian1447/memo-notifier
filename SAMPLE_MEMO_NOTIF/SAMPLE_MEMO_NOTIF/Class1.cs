@@ -8,10 +8,25 @@ namespace SAMPLE_MEMO_NOTIF
 {
     class MySqlConnectivity
     {
-        public MySqlDataReader hello() {
+        public static MySqlConnection conn = null;
 
-            MySqlDataReader tl = new MySqlDataReader();
-            return tl;
+        public MySqlConnection Connection() {
+            conn = new MySqlConnection("datasource=localhost;database=memo_notif;port=3306;password=password");
+            return conn;
+        }
+
+        public bool isConnection() { 
+            get {
+                try{
+                    if (conn.State == System.Data.ConnectionState.Closed)
+                    {
+                        conn.Open();
+                        return true;
+                    }
+                } catch {
+                    return false;
+                }
+            }
         }
     }
 }
