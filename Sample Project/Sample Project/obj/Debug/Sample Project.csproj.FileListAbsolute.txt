@@ -6,3 +6,4 @@ C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Proj
 C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.exe
 C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.pdb
 C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.LogIn.resources
+C:\Users\USER\Documents\GitHub\memo-notifier\Sample Project\Sample Project\obj\Debug\Sample_Project.exe
