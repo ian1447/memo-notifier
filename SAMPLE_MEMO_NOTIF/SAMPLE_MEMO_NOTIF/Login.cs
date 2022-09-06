@@ -19,7 +19,15 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (LoginDal.isConnection)
+                MessageBox.Show("Hello");
+            else
+                MessageBox.Show("Wrong");
         }
     }
 }
