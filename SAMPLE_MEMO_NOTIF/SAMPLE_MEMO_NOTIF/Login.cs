@@ -6,21 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SAMPLE_MEMO_NOTIF.DAL;
 
 namespace SAMPLE_MEMO_NOTIF
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class Login : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            mf.Show();
-            this.Hide();
+
         }
     }
 }

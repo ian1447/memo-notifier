@@ -1,4 +1,0 @@
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.dll
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\obj\Debug\SAMPLE_MEMO_NOTIF.DAL.dll
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\obj\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb

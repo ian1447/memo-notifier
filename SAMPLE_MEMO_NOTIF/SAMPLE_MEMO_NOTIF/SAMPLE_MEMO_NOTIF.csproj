@@ -54,12 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +68,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -99,6 +98,10 @@
     <ProjectReference Include="..\SAMPLE_MEMO_NOTIF.CORE\SAMPLE_MEMO_NOTIF.CORE.csproj">
       <Project>{17C25297-5AFB-41D8-B199-378B617F7BBD}</Project>
       <Name>SAMPLE_MEMO_NOTIF.CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAMPLE_MEMO_NOTIF.DAL\SAMPLE_MEMO_NOTIF.DAL.csproj">
+      <Project>{C5E27260-D2AD-42B3-987A-F35F14D511AF}</Project>
+      <Name>SAMPLE_MEMO_NOTIF.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
