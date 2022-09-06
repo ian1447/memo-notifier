@@ -8,15 +8,3 @@ C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe.licenses
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.pdb
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.csprojResolveAssemblyReference.cache
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.Form1.resources
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.MainForm.resources
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.Properties.Resources.resources
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.csproj.GenerateResource.Cache
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe.licenses
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.exe
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.pdb
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\dal.dll
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\dal.pdb
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe
-C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.pdb
