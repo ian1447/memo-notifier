@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>2b1dc790-9230-4b46-91bd-018aaf85a0e3</ProjectGuid>
+    <ProjectGuid>{213A2487-F3F6-402A-B0CF-8F4CC5537B9F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>dal</RootNamespace>

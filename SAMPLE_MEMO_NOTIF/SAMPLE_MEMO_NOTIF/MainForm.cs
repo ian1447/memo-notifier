@@ -21,5 +21,10 @@ namespace SAMPLE_MEMO_NOTIF
         {
 
         }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

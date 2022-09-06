@@ -1,0 +1,4 @@
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\dal\bin\Debug\dal.dll
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\dal\bin\Debug\dal.pdb
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\dal\obj\Debug\dal.dll
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\dal\obj\Debug\dal.pdb
