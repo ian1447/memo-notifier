@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dal
+namespace SAMPLE_MEMO_NOTIF.DAL
 {
     public class Class1
     {
