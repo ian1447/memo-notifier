@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using SAMPLE_MEMO_NOTIF.CORE;
+using SAMPLE_MEMO_NOTIF.DAL;
 
 namespace SAMPLE_MEMO_NOTIF
 {
