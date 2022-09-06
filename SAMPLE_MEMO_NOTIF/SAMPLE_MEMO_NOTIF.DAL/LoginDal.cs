@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 
 namespace SAMPLE_MEMO_NOTIF.DAL
 {
-    class LoginDal
+    public class LoginDal
     {
         public static MySqlConnection conn = null;
 
@@ -16,7 +16,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
             return conn;
         }
 
-        public bool isConnection
+        public static bool isConnection
         {
             get
             {
