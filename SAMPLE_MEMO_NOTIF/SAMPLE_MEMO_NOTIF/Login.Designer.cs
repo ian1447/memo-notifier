@@ -28,99 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title = new System.Windows.Forms.Label();
-            this.LogIn_Page = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnlogin1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btncancel1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.Header = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // Title
+            // btnlogin1
             // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.Maroon;
-            this.Title.Location = new System.Drawing.Point(12, 37);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(297, 37);
-            this.Title.TabIndex = 0;
-            this.Title.Text = "MEMO NOTIFICATION";
+            this.btnlogin1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin1.Appearance.Options.UseFont = true;
+            this.btnlogin1.Location = new System.Drawing.Point(9, 219);
+            this.btnlogin1.Name = "btnlogin1";
+            this.btnlogin1.Size = new System.Drawing.Size(147, 33);
+            this.btnlogin1.TabIndex = 8;
+            this.btnlogin1.Text = "LOGIN";
+            this.btnlogin1.Click += new System.EventHandler(this.btnlogin1_Click);
             // 
-            // LogIn_Page
+            // btncancel1
             // 
-            this.LogIn_Page.AutoSize = true;
-            this.LogIn_Page.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogIn_Page.Location = new System.Drawing.Point(116, 88);
-            this.LogIn_Page.Name = "LogIn_Page";
-            this.LogIn_Page.Size = new System.Drawing.Size(64, 23);
-            this.LogIn_Page.TabIndex = 1;
-            this.LogIn_Page.Text = "Log In";
+            this.btncancel1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancel1.Appearance.Options.UseFont = true;
+            this.btncancel1.Location = new System.Drawing.Point(162, 219);
+            this.btncancel1.Name = "btncancel1";
+            this.btncancel1.Size = new System.Drawing.Size(147, 33);
+            this.btncancel1.TabIndex = 9;
+            this.btncancel1.Text = "CANCEL";
+            this.btncancel1.Click += new System.EventHandler(this.btncancel1_Click);
             // 
-            // label1
+            // labelControl1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username: ";
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(32, 131);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(77, 19);
+            this.labelControl1.TabIndex = 10;
+            this.labelControl1.Text = "Username:";
             // 
-            // label2
+            // labelControl2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password: ";
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(32, 173);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(73, 19);
+            this.labelControl2.TabIndex = 11;
+            this.labelControl2.Text = "Password:";
             // 
-            // username
+            // txtUsername
             // 
-            this.username.Location = new System.Drawing.Point(122, 129);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(166, 21);
-            this.username.TabIndex = 4;
+            this.txtUsername.Location = new System.Drawing.Point(120, 130);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(183, 20);
+            this.txtUsername.TabIndex = 12;
             // 
-            // password
+            // txtPassword
             // 
-            this.password.Location = new System.Drawing.Point(122, 171);
-            this.password.Name = "password";
-            this.password.PasswordChar = '*';
-            this.password.Size = new System.Drawing.Size(166, 21);
-            this.password.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(120, 170);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(183, 20);
+            this.txtPassword.TabIndex = 13;
             // 
-            // button1
+            // Header
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(87, 218);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "LOG IN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Header.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Header.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.Header.Location = new System.Drawing.Point(12, 36);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(283, 37);
+            this.Header.TabIndex = 14;
+            this.Header.Text = "MEMO NOTIFICATION";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(132, 88);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(45, 23);
+            this.labelControl3.TabIndex = 15;
+            this.labelControl3.Text = "Login";
             // 
             // Login
             // 
+            this.AcceptButton = this.btnlogin1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 301);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.LogIn_Page);
-            this.Controls.Add(this.Title);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.Header);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.btncancel1);
+            this.Controls.Add(this.btnlogin1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,13 +143,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.Label LogIn_Page;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.SimpleButton btnlogin1;
+        private DevExpress.XtraEditors.SimpleButton btncancel1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private DevExpress.XtraEditors.LabelControl Header;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
 
 
     }
