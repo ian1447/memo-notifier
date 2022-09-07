@@ -15,5 +15,10 @@ namespace SAMPLE_MEMO_NOTIF
         {
             InitializeComponent();
         }
+
+        private void bwLoadData_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }
