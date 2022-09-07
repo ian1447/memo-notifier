@@ -22,3 +22,11 @@ C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.WaitForm1.resources
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.csproj.GenerateResource.Cache
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe.licenses
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.exe
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.pdb
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.CORE.dll
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.dll
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.CORE.pdb
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.exe
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.pdb

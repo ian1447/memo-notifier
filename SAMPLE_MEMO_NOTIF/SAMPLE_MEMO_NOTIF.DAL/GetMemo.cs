@@ -8,7 +8,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
 {
     public class GetMemo
     {
-        public string ErrorMessage;
+        public static string ErrorMessage;
 
         public static DataTable fillTable()
         {
@@ -18,7 +18,8 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                 {
                     LoginDal.conn.Open();
 
-                    MySqlDataAdapter sqldata = new MySqlDataAdapter("sp_get_student_list",LoginDal.conn);
+                    MySqlDataAdapter sqldata = new MySqlDataAdapter("sp_view_memos",LoginDal.conn);
+
                     DataTable dtbl = new DataTable();
                     sqldata.Fill(dtbl);
 
