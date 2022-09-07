@@ -48,19 +48,21 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_login",conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new MySqlParameter("_Username", Username));
-                    cmd.Parameters.Add(new MySqlParameter("_Password", Password));
+                    cmd.Parameters.Add(new MySqlParameter("_username", Username));
+                    cmd.Parameters.Add(new MySqlParameter("_password", Password));
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);
                     conn.Close();
                     GetUserDataSuccessful=true;
-                    if (dt.Tables.Count > 0)
+                   // errormessage = dt.Tables[0].Rows[0][0].ToString();
+                    if (dt.Tables[0].Rows.Count > 0)
                     {
-                        errormessage = Password;
                         return dt.Tables[0];
                     }
                     else
+                    {
                         return null;
+                    }
                 }
             } catch (Exception ex)
             {
