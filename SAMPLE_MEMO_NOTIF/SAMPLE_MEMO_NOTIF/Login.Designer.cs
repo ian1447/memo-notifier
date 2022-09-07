@@ -86,6 +86,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.EditValue = "mor";
             this.txtUsername.Location = new System.Drawing.Point(120, 130);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(183, 20);
@@ -94,6 +95,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.EditValue = "password";
             this.txtPassword.Location = new System.Drawing.Point(120, 170);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';

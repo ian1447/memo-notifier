@@ -8,7 +8,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
 {
     public class GetMemo
     {
-        public string ErrorMessage;
+        public static string ErrorMessage = string.Empty;
 
         public static DataTable fillTable()
         {
@@ -27,7 +27,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                 }
                 catch (Exception ex)
                 {
-                    ErrorMessage = ex + "\n Function: View Memo";
+                    ErrorMessage = ex.ToString() + "\n Function: View Memo";
                     return null;
                 }
             }

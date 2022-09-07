@@ -42,7 +42,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
         public static int n;
         public static DataTable GetUserData(string Username, string Password)
         {
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
             DataSet dt = new DataSet();
             try {
                 using (Connection())

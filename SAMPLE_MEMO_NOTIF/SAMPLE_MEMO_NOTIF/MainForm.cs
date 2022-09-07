@@ -30,9 +30,13 @@ namespace SAMPLE_MEMO_NOTIF
             vmf.Show();
         }
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Go back?","Confirmation.",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                Login.UserLogout = true;
+                this.Close();
+            }
         }
 
     }

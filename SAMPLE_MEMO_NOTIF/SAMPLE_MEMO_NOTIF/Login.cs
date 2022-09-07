@@ -13,6 +13,8 @@ namespace SAMPLE_MEMO_NOTIF
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
+
+        public static bool UserLogout = false;
         public Login()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         bool loadingIsAlreadyShowing = false;
@@ -114,14 +116,34 @@ namespace SAMPLE_MEMO_NOTIF
             {
                 if (UserData != null)
                 {
-                    this.Hide();
-                    MessageBox.Show("Welcome " + txtUsername.Text);
-                    MainForm MainWin = new MainForm();
-                    MainWin.Show();
+                    loginsuccess();
                 }
                 else
                     MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
             }
+        }
+
+        private void loginsuccess()
+        {
+            this.Hide();
+            MessageBox.Show("Welcome " + txtUsername.Text);
+            MainForm MainWin = new MainForm();
+            MainWin.ShowDialog();
+
+            try
+            {
+                if (UserLogout)
+                {
+                    this.Show();
+                    txtPassword.Text = string.Empty;
+                    txtUsername.Text = string.Empty;
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            catch { }
         }
 
         private void txtPassword_Click(object sender, EventArgs e)
@@ -142,7 +164,6 @@ namespace SAMPLE_MEMO_NOTIF
                 txtPassword.Properties.PasswordChar = '\0';
             else
                 txtPassword.Properties.PasswordChar = '*';
-
         }
     }
 }
