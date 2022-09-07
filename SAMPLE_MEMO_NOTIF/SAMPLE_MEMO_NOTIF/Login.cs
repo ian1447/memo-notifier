@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using SAMPLE_MEMO_NOTIF.DAL;
+using System.Threading;
 
 namespace SAMPLE_MEMO_NOTIF
 {
@@ -34,15 +35,58 @@ namespace SAMPLE_MEMO_NOTIF
             
         }
 
+        bool loadingIsAlreadyShowing = false;
+        private void ShowLoading(string message)
+        {
+            try
+            {
+                foreach (Control c in this.Controls)
+                {
+                    c.Enabled = false;
+                }
+
+                if (!loadingIsAlreadyShowing)
+                {
+                    loadingIsAlreadyShowing = true;
+                    splashScreenManager.ShowWaitForm();
+                }
+                splashScreenManager.SetWaitFormDescription(message);
+            }
+            catch { }
+        }
+
+        private void HideLoading()
+        {
+            try
+            {
+                foreach (Control c in this.Controls)
+                {
+                    c.Enabled = true;
+                }
+
+                loadingIsAlreadyShowing = false;
+                splashScreenManager.CloseWaitForm();
+            }
+            catch { }
+        }
+
         DataTable UserData = new DataTable();
         private void btnlogin1_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(txtPassword.Text))
+            try
             {
-                bglogin.RunWorkerAsync();
+                if (!String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(txtPassword.Text))
+                {
+                    btnlogin1.Enabled = false;
+                    ShowLoading("Getting User Data....");
+                    bglogin.RunWorkerAsync();
+                }
+                else
+                    MessageBox.Show("Please Input Username or Password!!");
             }
-            else
-                MessageBox.Show("Please Input Username or Password!!");
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btncancel1_Click(object sender, EventArgs e)
@@ -64,14 +108,32 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void bglogin_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (UserData != null)
+            HideLoading();
+            btnlogin1.Enabled = true;
+            if (LoginDal.GetUserDataSuccessful)
             {
-                this.Hide();
-                MainForm MainWin = new MainForm();
-                MainWin.Show();
+                if (UserData != null)
+                {
+                    this.Hide();
+                    MessageBox.Show("Welcome " + txtUsername.Text);
+                    MainForm MainWin = new MainForm();
+                    MainWin.Show();
+                }
+                else
+                    MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
             }
-            else
-                MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.SelectAll();
+            txtPassword.Focus();
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            txtUsername.SelectAll();
+            txtUsername.Focus();
         }
     }
 }

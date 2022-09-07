@@ -37,6 +37,7 @@
             this.Header = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.bglogin = new System.ComponentModel.BackgroundWorker();
+            this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SAMPLE_MEMO_NOTIF.WaitForm1), false, false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             this.btnlogin1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin1.Appearance.Options.UseFont = true;
-            this.btnlogin1.Location = new System.Drawing.Point(9, 219);
+            this.btnlogin1.Location = new System.Drawing.Point(9, 234);
             this.btnlogin1.Name = "btnlogin1";
             this.btnlogin1.Size = new System.Drawing.Size(147, 33);
             this.btnlogin1.TabIndex = 8;
@@ -56,7 +57,7 @@
             // 
             this.btncancel1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel1.Appearance.Options.UseFont = true;
-            this.btncancel1.Location = new System.Drawing.Point(162, 219);
+            this.btncancel1.Location = new System.Drawing.Point(162, 234);
             this.btncancel1.Name = "btncancel1";
             this.btncancel1.Size = new System.Drawing.Size(147, 33);
             this.btncancel1.TabIndex = 9;
@@ -87,6 +88,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(183, 20);
             this.txtUsername.TabIndex = 12;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // txtPassword
             // 
@@ -95,6 +97,7 @@
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(183, 20);
             this.txtPassword.TabIndex = 13;
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // Header
             // 
@@ -158,6 +161,7 @@
         private DevExpress.XtraEditors.LabelControl Header;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.ComponentModel.BackgroundWorker bglogin;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
 
 
     }
