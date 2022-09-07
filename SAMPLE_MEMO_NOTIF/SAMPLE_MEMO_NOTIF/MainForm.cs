@@ -21,7 +21,7 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Object_control(false);
+
         }
 
         private void ribbon_Click(object sender, EventArgs e)
@@ -31,13 +31,9 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void btnShowMemo_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Object_control(true);
+            ViewMemoForm vmf = new ViewMemoForm();
+            vmf.ShowDialog();
         }
-        private void Object_control(bool control) {
 
-            GrpMemoList.Visible = control;
-            GrpMemoInfo.Visible = control;
-            
-        }
     }
 }
