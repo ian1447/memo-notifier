@@ -43,7 +43,7 @@ namespace SAMPLE_MEMO_NOTIF
                     MessageBox.Show(LoginDal.errormessage + "\nWTF");
                 }
                 else
-                    MessageBox.Show("Wrong Username or Password!!");
+                    MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
             }
             else
                 MessageBox.Show("Please Input Username or Password!!");
