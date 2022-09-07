@@ -47,6 +47,7 @@
             // bwLoadData
             // 
             this.bwLoadData.WorkerSupportsCancellation = true;
+            this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
             // 
             // dataGridView1
             // 
