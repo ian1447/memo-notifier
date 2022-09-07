@@ -54,10 +54,10 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                     adp.Fill(dt);
                     conn.Close();
                     GetUserDataSuccessful=true;
-                    if (dt.Tables.Count > 1)
+                    if (dt.Tables.Count > 0)
                     {
                         n = dt.Tables.Count;
-                        errormessage = n.ToString;
+                        errormessage = n.ToString();
                         return dt.Tables[0];
                     }
                     else
