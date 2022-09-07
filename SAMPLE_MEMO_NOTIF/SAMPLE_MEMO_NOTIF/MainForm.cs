@@ -27,7 +27,7 @@ namespace SAMPLE_MEMO_NOTIF
         private void btnShowMemo_ItemClick(object sender, ItemClickEventArgs e)
         {
             ViewMemoForm vmf = new ViewMemoForm();
-            vmf.ShowDialog();
+            vmf.Show();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

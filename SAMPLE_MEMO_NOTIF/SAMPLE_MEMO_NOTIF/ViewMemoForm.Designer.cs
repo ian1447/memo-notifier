@@ -196,7 +196,9 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewMemoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewMemoForm";
+            this.Load += new System.EventHandler(this.ViewMemoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
