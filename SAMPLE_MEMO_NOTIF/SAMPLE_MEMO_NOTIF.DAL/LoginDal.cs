@@ -56,8 +56,7 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                     GetUserDataSuccessful=true;
                     if (dt.Tables.Count > 0)
                     {
-                        n = dt.Tables.Count;
-                        errormessage = n.ToString();
+                        errormessage = Password;
                         return dt.Tables[0];
                     }
                     else

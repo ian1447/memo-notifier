@@ -33,20 +33,6 @@ namespace SAMPLE_MEMO_NOTIF
         {
             
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(txtPassword.Text))
-            {
-                DataTable UserData = LoginDal.GetUserData(txtUsername.Text,txtPassword.Text);
-                if (UserData != null)
-                {
-                    MessageBox.Show("hello");
-                }
-                else
-                    MessageBox.Show(LoginDal.GetUserDataError);
-            }
-        }
         private void btnlogin1_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(txtPassword.Text))
@@ -54,11 +40,13 @@ namespace SAMPLE_MEMO_NOTIF
                 DataTable UserData = LoginDal.GetUserData(txtUsername.Text, txtPassword.Text);
                 if (UserData != null)
                 {
-                    MessageBox.Show(LoginDal.errormessage);
+                    MessageBox.Show(LoginDal.errormessage + "\nWTF");
                 }
                 else
                     MessageBox.Show("Wrong Username or Password!!");
             }
+            else
+                MessageBox.Show("Please Input Username or Password!!");
         }
 
         private void btncancel1_Click(object sender, EventArgs e)
