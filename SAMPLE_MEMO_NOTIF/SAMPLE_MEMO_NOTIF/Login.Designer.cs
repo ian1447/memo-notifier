@@ -36,6 +36,7 @@
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.Header = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.bglogin = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +115,11 @@
             this.labelControl3.TabIndex = 15;
             this.labelControl3.Text = "Login";
             // 
+            // bglogin
+            // 
+            this.bglogin.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bglogin_DoWork);
+            this.bglogin.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bglogin_RunWorkerCompleted);
+            // 
             // Login
             // 
             this.AcceptButton = this.btnlogin1;
@@ -151,6 +157,7 @@
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.LabelControl Header;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.ComponentModel.BackgroundWorker bglogin;
 
 
     }

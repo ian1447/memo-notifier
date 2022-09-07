@@ -26,3 +26,4 @@ C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.CORE.pdb
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.Login.resources
+C:\Users\Ryan Simbajon\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF\obj\Debug\SAMPLE_MEMO_NOTIF.ViewMemoForm.resources

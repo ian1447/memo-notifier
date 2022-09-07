@@ -33,17 +33,13 @@ namespace SAMPLE_MEMO_NOTIF
         {
             
         }
+
+        DataTable UserData = new DataTable();
         private void btnlogin1_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(txtPassword.Text))
             {
-                DataTable UserData = LoginDal.GetUserData(txtUsername.Text, txtPassword.Text);
-                if (UserData != null)
-                {
-                    MessageBox.Show(LoginDal.errormessage + "\nWTF");
-                }
-                else
-                    MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
+                bglogin.RunWorkerAsync();
             }
             else
                 MessageBox.Show("Please Input Username or Password!!");
@@ -52,6 +48,30 @@ namespace SAMPLE_MEMO_NOTIF
         private void btncancel1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void bglogin_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                UserData = LoginDal.GetUserData(txtUsername.Text, txtPassword.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bglogin_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (UserData != null)
+            {
+                this.Hide();
+                MainForm MainWin = new MainForm();
+                MainWin.Show();
+            }
+            else
+                MessageBox.Show(LoginDal.errormessage + "\nWrong Username or Password!!");
         }
     }
 }

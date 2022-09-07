@@ -24,15 +24,15 @@ namespace SAMPLE_MEMO_NOTIF
 
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnShowMemo_ItemClick(object sender, ItemClickEventArgs e)
         {
             ViewMemoForm vmf = new ViewMemoForm();
             vmf.ShowDialog();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
     }

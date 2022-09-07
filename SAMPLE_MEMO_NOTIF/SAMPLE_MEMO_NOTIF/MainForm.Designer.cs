@@ -58,7 +58,6 @@
             this.ribbonPage1});
             this.ribbon.Size = new System.Drawing.Size(988, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnAddMemo
             // 
@@ -132,6 +131,7 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
