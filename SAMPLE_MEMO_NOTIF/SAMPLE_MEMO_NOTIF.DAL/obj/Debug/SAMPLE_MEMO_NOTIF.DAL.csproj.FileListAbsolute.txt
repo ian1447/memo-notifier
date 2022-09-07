@@ -6,3 +6,4 @@ C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\bin\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\obj\Debug\SAMPLE_MEMO_NOTIF.DAL.dll
 C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\obj\Debug\SAMPLE_MEMO_NOTIF.DAL.pdb
+C:\Users\USER\Documents\GitHub\memo-notifier\SAMPLE_MEMO_NOTIF\SAMPLE_MEMO_NOTIF.DAL\obj\Debug\SAMPLE_MEMO_NOTIF.DAL.csprojResolveAssemblyReference.cache

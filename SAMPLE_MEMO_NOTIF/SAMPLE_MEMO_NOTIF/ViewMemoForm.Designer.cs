@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.memoDataTable = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblCategory = new DevExpress.XtraEditors.LabelControl();
@@ -38,7 +39,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoDataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -49,14 +50,26 @@
             this.bwLoadData.WorkerSupportsCancellation = true;
             this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
             // 
-            // dataGridView1
+            // memoDataTable
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(189, 304);
-            this.dataGridView1.TabIndex = 0;
+            this.memoDataTable.AllowUserToAddRows = false;
+            this.memoDataTable.AllowUserToDeleteRows = false;
+            this.memoDataTable.AllowUserToResizeColumns = false;
+            this.memoDataTable.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memoDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.memoDataTable.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.memoDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.memoDataTable.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.memoDataTable.Location = new System.Drawing.Point(12, 36);
+            this.memoDataTable.MultiSelect = false;
+            this.memoDataTable.Name = "memoDataTable";
+            this.memoDataTable.ReadOnly = true;
+            this.memoDataTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.memoDataTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.memoDataTable.Size = new System.Drawing.Size(224, 279);
+            this.memoDataTable.TabIndex = 0;
+            this.memoDataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.memoDataTable_CellContentClick);
             // 
             // groupControl2
             // 
@@ -65,11 +78,11 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.groupControl2.Appearance.Options.UseFont = true;
-            this.groupControl2.Location = new System.Drawing.Point(485, 36);
+            this.groupControl2.Location = new System.Drawing.Point(520, 36);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(415, 279);
-            this.groupControl2.TabIndex = 326;
+            this.groupControl2.TabIndex = 328;
             this.groupControl2.Text = "Viewer";
             // 
             // groupControl1
@@ -84,11 +97,11 @@
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.lblTitle);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Location = new System.Drawing.Point(206, 36);
+            this.groupControl1.Location = new System.Drawing.Point(241, 36);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(256, 279);
-            this.groupControl1.TabIndex = 325;
+            this.groupControl1.TabIndex = 327;
             this.groupControl1.Text = "Details";
             // 
             // lblCategory
@@ -191,15 +204,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 356);
+            this.ClientSize = new System.Drawing.Size(974, 356);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.memoDataTable);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ViewMemoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewMemoForm";
             this.Load += new System.EventHandler(this.ViewMemoForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoDataTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -210,7 +225,7 @@
         #endregion
 
         private System.ComponentModel.BackgroundWorker bwLoadData;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView memoDataTable;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         public DevExpress.XtraEditors.LabelControl lblCategory;
