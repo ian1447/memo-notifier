@@ -135,5 +135,14 @@ namespace SAMPLE_MEMO_NOTIF
             txtUsername.SelectAll();
             txtUsername.Focus();
         }
+
+        private void chbshowpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbshowpass.Checked)
+                txtPassword.Properties.PasswordChar = '\0';
+            else
+                txtPassword.Properties.PasswordChar = '*';
+
+        }
     }
 }

@@ -38,8 +38,10 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.bglogin = new System.ComponentModel.BackgroundWorker();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SAMPLE_MEMO_NOTIF.WaitForm1), false, false);
+            this.chbshowpass = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chbshowpass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlogin1
@@ -123,12 +125,22 @@
             this.bglogin.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bglogin_DoWork);
             this.bglogin.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bglogin_RunWorkerCompleted);
             // 
+            // chbshowpass
+            // 
+            this.chbshowpass.Location = new System.Drawing.Point(209, 196);
+            this.chbshowpass.Name = "chbshowpass";
+            this.chbshowpass.Properties.Caption = "Show Password";
+            this.chbshowpass.Size = new System.Drawing.Size(94, 19);
+            this.chbshowpass.TabIndex = 17;
+            this.chbshowpass.CheckedChanged += new System.EventHandler(this.chbshowpass_CheckedChanged);
+            // 
             // Login
             // 
             this.AcceptButton = this.btnlogin1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 301);
+            this.Controls.Add(this.chbshowpass);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.txtPassword);
@@ -145,6 +157,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chbshowpass.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +175,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.ComponentModel.BackgroundWorker bglogin;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
+        private DevExpress.XtraEditors.CheckEdit chbshowpass;
 
 
     }
