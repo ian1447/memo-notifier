@@ -53,5 +53,11 @@ namespace SAMPLE_MEMO_NOTIF
             else
                 MessageBox.Show("You are not an  Admin!");
         }
+
+        private void btnShowOffices_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowOfficesForm ShowOfficeWin = new ShowOfficesForm();
+            ShowOfficeWin.ShowDialog();
+        }
     }
 }
