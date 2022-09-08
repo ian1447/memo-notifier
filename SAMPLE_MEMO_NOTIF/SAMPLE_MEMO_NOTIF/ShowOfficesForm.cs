@@ -7,6 +7,8 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using SAMPLE_MEMO_NOTIF.DAL;
+using System.Data;
 
 namespace SAMPLE_MEMO_NOTIF
 {
@@ -15,6 +17,11 @@ namespace SAMPLE_MEMO_NOTIF
         public ShowOfficesForm()
         {
             InitializeComponent();
+            DataTable dtb = ShowOfficesDal.showoffice();
+            gridControl1.DataSource = dtb;
+
+
+
         }
     }
 }

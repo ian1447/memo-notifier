@@ -93,6 +93,7 @@
             this.btnShowOffices.Id = 3;
             this.btnShowOffices.Name = "btnShowOffices";
             this.btnShowOffices.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnShowOffices.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowOffices_ItemClick);
             // 
             // barButtonItem4
             // 
