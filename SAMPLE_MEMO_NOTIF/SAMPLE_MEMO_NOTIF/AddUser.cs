@@ -75,7 +75,7 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void bgadduser_DoWork(object sender, DoWorkEventArgs e)
         {
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
             try
             {
                 AddUserDal.AddingUsers(txtnewuser.Text,txtnewpasswd.Text);
@@ -94,6 +94,11 @@ namespace SAMPLE_MEMO_NOTIF
             else
                 MessageBox.Show("Done!!");
                 this.Close();
+        }
+
+        private void btncanceladduser_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

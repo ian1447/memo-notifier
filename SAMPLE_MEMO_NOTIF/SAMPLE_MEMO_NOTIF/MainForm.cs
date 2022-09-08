@@ -21,7 +21,10 @@ namespace SAMPLE_MEMO_NOTIF
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            if (LoginDal.isadmin)
+                brbtnadd.Enabled = true;
+            else
+                brbtnadd.Enabled = false;
         }
 
         private void btnShowMemo_ItemClick(object sender, ItemClickEventArgs e)
@@ -50,6 +53,5 @@ namespace SAMPLE_MEMO_NOTIF
             else
                 MessageBox.Show("You are not an  Admin!");
         }
-
     }
 }

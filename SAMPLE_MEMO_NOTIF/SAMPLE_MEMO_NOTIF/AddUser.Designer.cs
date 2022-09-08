@@ -122,6 +122,7 @@
             this.btncanceladduser.Size = new System.Drawing.Size(117, 39);
             this.btncanceladduser.TabIndex = 8;
             this.btncanceladduser.Text = "Cancel";
+            this.btncanceladduser.Click += new System.EventHandler(this.btncanceladduser_Click);
             // 
             // bgadduser
             // 
