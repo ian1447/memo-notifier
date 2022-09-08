@@ -35,7 +35,10 @@ namespace SAMPLE_MEMO_NOTIF
                 DataTable tbl = new DataTable();
                 tbl = GetMemo.fillTable();
                 if (tbl.Rows.Count > 0)
-                    memoDataTable.DataSource = tbl;
+         
+                    gridControl1.DataSource = tbl;
+            
+                    //memoDataTable.DataSource = tbl;
                 else
                     MessageBox.Show("No Memo");
             }
@@ -45,30 +48,13 @@ namespace SAMPLE_MEMO_NOTIF
             }
         }
 
-        private void memoDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridControl1_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.memoDataTable.Rows[e.RowIndex];
 
-                lblTitle.Text = row.Cells["title"].Value.ToString();
-                lblParticulars.Text = row.Cells["particulars"].Value.ToString();
-                lblCategory.Text = row.Cells["category_id"].Value.ToString();
-
-                /*try
-                {
-
-                    MemoryStream images = con.getImage(label1.Text);
-                    pictureBox1.Image = Image.FromStream(images);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }*/
-
-
-
-            }
         }
+
+
+
+
     }
 }
