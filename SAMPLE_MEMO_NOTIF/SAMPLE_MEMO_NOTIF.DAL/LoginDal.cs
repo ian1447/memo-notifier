@@ -39,10 +39,11 @@ namespace SAMPLE_MEMO_NOTIF.DAL
 
         public static string GetUserDataError = string.Empty;
         public static bool GetUserDataSuccessful = false;
+        public static bool isadmin = false;
         public static int n;
         public static DataTable GetUserData(string Username, string Password)
         {
-            //Thread.Sleep(3000);
+            Thread.Sleep(2000);
             DataSet dt = new DataSet();
             try {
                 using (Connection())
@@ -56,7 +57,9 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                     adp.Fill(dt);
                     conn.Close();
                     GetUserDataSuccessful=true;
-                   // errormessage = dt.Tables[0].Rows[0][0].ToString();
+                    //errormessage = dt.Tables[0].Rows[0][3].ToString();
+                    if (dt.Tables[0].Rows[0][3].ToString() == "Y")
+                        isadmin = true;
                     if (dt.Tables[0].Rows.Count > 0)
                     {
                         return dt.Tables[0];

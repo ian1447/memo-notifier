@@ -35,8 +35,20 @@ namespace SAMPLE_MEMO_NOTIF
             if (MessageBox.Show("Go back?","Confirmation.",MessageBoxButtons.YesNo)==DialogResult.Yes)
             {
                 Login.UserLogout = true;
+                LoginDal.isadmin = false;
                 this.Close();
             }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (LoginDal.isadmin)
+            {
+                AddUser addwin = new AddUser();
+                addwin.ShowDialog();
+            }
+            else
+                MessageBox.Show("You are not an  Admin!");
         }
 
     }
