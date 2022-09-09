@@ -63,7 +63,7 @@
             this.groupControl2.Location = new System.Drawing.Point(520, 36);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(415, 279);
+            this.groupControl2.Size = new System.Drawing.Size(341, 279);
             this.groupControl2.TabIndex = 328;
             this.groupControl2.Text = "Viewer";
             // 
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 356);
+            this.ClientSize = new System.Drawing.Size(872, 356);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
