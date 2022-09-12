@@ -74,7 +74,6 @@ namespace SAMPLE_MEMO_NOTIF.DAL
                 GetUserDataError = ex.Message + "\n Function:  GetUsersData";
                 return null;
             }
-
         }
 
     }

@@ -36,12 +36,14 @@
             this.btnAddMemo = new DevExpress.XtraEditors.SimpleButton();
             this.txtMemoNo = new DevExpress.XtraEditors.TextEdit();
             this.txtTitle = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblMemoNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtParticulars = new DevExpress.XtraEditors.TextEdit();
             this.ceEditMemo = new DevExpress.XtraEditors.CheckEdit();
             this.btncancel = new DevExpress.XtraEditors.SimpleButton();
+            this.bgAddMemo = new System.ComponentModel.BackgroundWorker();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SAMPLE_MEMO_NOTIF.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMemoNo.Properties)).BeginInit();
@@ -59,7 +61,7 @@
             this.gridControl1.TabIndex = 330;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -107,6 +109,7 @@
             this.txtMemoNo.Name = "txtMemoNo";
             this.txtMemoNo.Size = new System.Drawing.Size(129, 20);
             this.txtMemoNo.TabIndex = 332;
+            this.txtMemoNo.EditValueChanged += new System.EventHandler(this.txtMemoNo_EditValueChanged);
             // 
             // txtTitle
             // 
@@ -115,13 +118,13 @@
             this.txtTitle.Size = new System.Drawing.Size(372, 20);
             this.txtTitle.TabIndex = 333;
             // 
-            // labelControl1
+            // lblMemoNo
             // 
-            this.labelControl1.Location = new System.Drawing.Point(285, 21);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 13);
-            this.labelControl1.TabIndex = 335;
-            this.labelControl1.Text = "Memo No.";
+            this.lblMemoNo.Location = new System.Drawing.Point(285, 21);
+            this.lblMemoNo.Name = "lblMemoNo";
+            this.lblMemoNo.Size = new System.Drawing.Size(48, 13);
+            this.lblMemoNo.TabIndex = 335;
+            this.lblMemoNo.Text = "Memo No.";
             // 
             // labelControl2
             // 
@@ -148,11 +151,13 @@
             // 
             // ceEditMemo
             // 
+            this.ceEditMemo.EditValue = true;
             this.ceEditMemo.Location = new System.Drawing.Point(582, 15);
             this.ceEditMemo.Name = "ceEditMemo";
             this.ceEditMemo.Properties.Caption = "Edit Memo";
             this.ceEditMemo.Size = new System.Drawing.Size(75, 19);
             this.ceEditMemo.TabIndex = 339;
+            this.ceEditMemo.CheckedChanged += new System.EventHandler(this.ceEditMemo_CheckedChanged);
             // 
             // btncancel
             // 
@@ -165,8 +170,14 @@
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
+            // bgAddMemo
+            // 
+            this.bgAddMemo.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.bgAddMemo.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // AddMemo
             // 
+            this.AcceptButton = this.btnAddMemo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 302);
@@ -175,12 +186,12 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtParticulars);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.lblMemoNo);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.txtMemoNo);
             this.Controls.Add(this.btnAddMemo);
             this.Controls.Add(this.gridControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddMemo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMemo";
@@ -202,7 +213,7 @@
         private DevExpress.XtraEditors.SimpleButton btnAddMemo;
         private DevExpress.XtraEditors.TextEdit txtMemoNo;
         private DevExpress.XtraEditors.TextEdit txtTitle;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblMemoNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtParticulars;
@@ -211,5 +222,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn id;
         private DevExpress.XtraGrid.Columns.GridColumn title;
+        private System.ComponentModel.BackgroundWorker bgAddMemo;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
