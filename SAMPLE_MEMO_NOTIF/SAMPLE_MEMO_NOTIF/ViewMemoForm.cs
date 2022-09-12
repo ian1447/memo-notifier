@@ -47,5 +47,12 @@ namespace SAMPLE_MEMO_NOTIF
                 MessageBox.Show(ex + GetMemo.ErrorMessage);
             }
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "title") + "";
+            lblParticulars.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "particulars") + "";
+            lblCategory.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "category_id") + "";
+        }
     }
 }
