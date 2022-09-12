@@ -33,20 +33,21 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.title = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.btnAddMemo = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMemoNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtTitle = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.txtParticulars = new DevExpress.XtraEditors.TextEdit();
+            this.ceEditMemo = new DevExpress.XtraEditors.CheckEdit();
+            this.btncancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMemoNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParticulars.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceEditMemo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -58,6 +59,7 @@
             this.gridControl1.TabIndex = 330;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -68,11 +70,9 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // id
             // 
@@ -90,29 +90,30 @@
             this.title.Visible = true;
             this.title.VisibleIndex = 1;
             // 
-            // simpleButton1
+            // btnAddMemo
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(551, 229);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(106, 46);
-            this.simpleButton1.TabIndex = 331;
-            this.simpleButton1.Text = "Add Memo";
+            this.btnAddMemo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMemo.Image")));
+            this.btnAddMemo.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnAddMemo.Location = new System.Drawing.Point(435, 229);
+            this.btnAddMemo.Name = "btnAddMemo";
+            this.btnAddMemo.Size = new System.Drawing.Size(106, 46);
+            this.btnAddMemo.TabIndex = 331;
+            this.btnAddMemo.Text = "Add Memo";
+            this.btnAddMemo.Click += new System.EventHandler(this.btnAddMemo_Click);
             // 
-            // textEdit1
+            // txtMemoNo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(285, 41);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(129, 20);
-            this.textEdit1.TabIndex = 332;
+            this.txtMemoNo.Location = new System.Drawing.Point(285, 41);
+            this.txtMemoNo.Name = "txtMemoNo";
+            this.txtMemoNo.Size = new System.Drawing.Size(129, 20);
+            this.txtMemoNo.TabIndex = 332;
             // 
-            // textEdit2
+            // txtTitle
             // 
-            this.textEdit2.Location = new System.Drawing.Point(285, 86);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(372, 20);
-            this.textEdit2.TabIndex = 333;
+            this.txtTitle.Location = new System.Drawing.Point(285, 86);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(372, 20);
+            this.txtTitle.TabIndex = 333;
             // 
             // labelControl1
             // 
@@ -138,43 +139,58 @@
             this.labelControl3.TabIndex = 338;
             this.labelControl3.Text = "Particulars";
             // 
-            // textEdit3
+            // txtParticulars
             // 
-            this.textEdit3.Location = new System.Drawing.Point(285, 139);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(372, 20);
-            this.textEdit3.TabIndex = 337;
+            this.txtParticulars.Location = new System.Drawing.Point(285, 139);
+            this.txtParticulars.Name = "txtParticulars";
+            this.txtParticulars.Size = new System.Drawing.Size(372, 20);
+            this.txtParticulars.TabIndex = 337;
             // 
-            // checkEdit1
+            // ceEditMemo
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(582, 15);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "Edit Memo";
-            this.checkEdit1.Size = new System.Drawing.Size(75, 19);
-            this.checkEdit1.TabIndex = 339;
+            this.ceEditMemo.Location = new System.Drawing.Point(582, 15);
+            this.ceEditMemo.Name = "ceEditMemo";
+            this.ceEditMemo.Properties.Caption = "Edit Memo";
+            this.ceEditMemo.Size = new System.Drawing.Size(75, 19);
+            this.ceEditMemo.TabIndex = 339;
+            // 
+            // btncancel
+            // 
+            this.btncancel.Image = ((System.Drawing.Image)(resources.GetObject("btncancel.Image")));
+            this.btncancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btncancel.Location = new System.Drawing.Point(550, 229);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(106, 46);
+            this.btncancel.TabIndex = 340;
+            this.btncancel.Text = "Cancel";
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // AddMemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 302);
-            this.Controls.Add(this.checkEdit1);
+            this.Controls.Add(this.btncancel);
+            this.Controls.Add(this.ceEditMemo);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.txtParticulars);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.txtMemoNo);
+            this.Controls.Add(this.btnAddMemo);
             this.Controls.Add(this.gridControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddMemo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMemo";
+            this.Load += new System.EventHandler(this.AddMemo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMemoNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParticulars.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceEditMemo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,16 +199,17 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn id;
-        private DevExpress.XtraGrid.Columns.GridColumn title;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.SimpleButton btnAddMemo;
+        private DevExpress.XtraEditors.TextEdit txtMemoNo;
+        private DevExpress.XtraEditors.TextEdit txtTitle;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.TextEdit txtParticulars;
+        private DevExpress.XtraEditors.CheckEdit ceEditMemo;
+        private DevExpress.XtraEditors.SimpleButton btncancel;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn id;
+        private DevExpress.XtraGrid.Columns.GridColumn title;
     }
 }

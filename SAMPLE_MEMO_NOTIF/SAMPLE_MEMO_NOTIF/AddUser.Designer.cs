@@ -148,6 +148,7 @@
             this.Name = "AddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUser";
+            this.Load += new System.EventHandler(this.AddUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtnewuser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewpasswd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtretypepasswd.Properties)).EndInit();

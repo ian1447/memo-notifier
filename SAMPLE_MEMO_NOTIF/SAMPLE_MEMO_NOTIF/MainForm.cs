@@ -59,5 +59,11 @@ namespace SAMPLE_MEMO_NOTIF
             ShowOfficesForm ShowOfficeWin = new ShowOfficesForm();
             ShowOfficeWin.ShowDialog();
         }
+
+        private void btnAddMemo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            AddMemo AddMemoWin = new AddMemo();
+            AddMemoWin.ShowDialog();
+        }
     }
 }

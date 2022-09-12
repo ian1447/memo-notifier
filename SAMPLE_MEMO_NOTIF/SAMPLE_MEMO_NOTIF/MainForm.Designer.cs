@@ -76,6 +76,7 @@
             this.btnAddMemo.Id = 1;
             this.btnAddMemo.Name = "btnAddMemo";
             this.btnAddMemo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnAddMemo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddMemo_ItemClick);
             // 
             // btnShowMemo
             // 

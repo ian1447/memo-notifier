@@ -100,5 +100,10 @@ namespace SAMPLE_MEMO_NOTIF
         {
             this.Close();
         }
+
+        private void AddUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

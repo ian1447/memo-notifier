@@ -47,14 +47,5 @@ namespace SAMPLE_MEMO_NOTIF
                 MessageBox.Show(ex + GetMemo.ErrorMessage);
             }
         }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
     }
 }
