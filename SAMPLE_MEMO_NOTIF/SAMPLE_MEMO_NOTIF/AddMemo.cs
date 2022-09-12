@@ -44,13 +44,26 @@ namespace SAMPLE_MEMO_NOTIF
         public static string addedby = "4";
         private void btnAddMemo_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtTitle.Text) && !string.IsNullOrEmpty(txtParticulars.Text))
+            if (ceEditMemo.Checked == false)
             {
-                ShowLoading("Adding Memo.....");
-                bgAddMemo.RunWorkerAsync();
+                if (!string.IsNullOrEmpty(txtTitle.Text) && !string.IsNullOrEmpty(txtParticulars.Text))
+                {
+                    ShowLoading("Adding Memo.....");
+                    bgAddMemo.RunWorkerAsync();
+                }
+                else
+                    MessageBox.Show("Please Input Details Above!!");
             }
             else
-                MessageBox.Show("Please Input Details Above!!");
+            {
+                if (!string.IsNullOrEmpty(txtMemoNo.Text) && !string.IsNullOrEmpty(txtTitle.Text) && !string.IsNullOrEmpty(txtParticulars.Text))
+                {
+                    ShowLoading("Adding Memo.....");
+                    bgAddMemo.RunWorkerAsync();
+                }
+                else
+                    MessageBox.Show("Please Input Details Above!!");
+            }
         }
 
         private void txtMemoNo_EditValueChanged(object sender, EventArgs e)
@@ -113,7 +126,6 @@ namespace SAMPLE_MEMO_NOTIF
                 idno = txtMemoNo.Text;
             else
                 idno = "0";
-            MessageBox.Show(idno);
             AddMemoDal.add_memo(idno, txtTitle.Text, txtParticulars.Text, addedby);
         }
 
