@@ -16,8 +16,19 @@ namespace SAMPLE_MEMO_NOTIF
         public ShowOfficesForm()
         {
             InitializeComponent();
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowOfficesForm_Load(object sender, EventArgs e)
+        {
             DataTable dtb = ShowOfficesDal.showoffice();
             gridControl1.DataSource = dtb;
         }
+
+
     }
 }

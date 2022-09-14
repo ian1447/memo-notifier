@@ -38,7 +38,7 @@ namespace SAMPLE_MEMO_NOTIF
             }
             catch { }
         }
-
+        
         private void HideLoading()
         {
             try

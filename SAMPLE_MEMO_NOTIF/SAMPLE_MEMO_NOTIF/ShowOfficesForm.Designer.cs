@@ -30,8 +30,8 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.OfficeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -43,33 +43,38 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(433, 296);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.TabIndex = 331;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.ID,
-            this.OfficeName});
+            this.id,
+            this.name});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
-            // ID
+            // id
             // 
-            this.ID.Caption = "ID";
-            this.ID.FieldName = "id";
-            this.ID.Name = "ID";
-            this.ID.Visible = true;
-            this.ID.VisibleIndex = 0;
+            this.id.Caption = "Office ID";
+            this.id.FieldName = "id";
+            this.id.Name = "id";
+            this.id.Visible = true;
+            this.id.VisibleIndex = 0;
             // 
-            // OfficeName
+            // name
             // 
-            this.OfficeName.Caption = "Office Name";
-            this.OfficeName.FieldName = "name";
-            this.OfficeName.Name = "OfficeName";
-            this.OfficeName.Visible = true;
-            this.OfficeName.VisibleIndex = 1;
+            this.name.Caption = "Office Name";
+            this.name.FieldName = "name";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 1;
             // 
             // ShowOfficesForm
             // 
@@ -79,6 +84,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "ShowOfficesForm";
             this.Text = "Show Offices";
+            this.Load += new System.EventHandler(this.ShowOfficesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -89,8 +95,9 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn ID;
-        private DevExpress.XtraGrid.Columns.GridColumn OfficeName;
+        private DevExpress.XtraGrid.Columns.GridColumn id;
+        private DevExpress.XtraGrid.Columns.GridColumn name;
+
 
     }
 }
